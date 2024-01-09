@@ -1,0 +1,148 @@
+interview -> DS 
+
+
+1) space complexity 
+2) time complexity 
+
+
+program -> 
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7 
+
+    time ?  single 2 second | 2000 users 
+    space ?
+
+    variable? 
+
+
+    12  45  67  88  99  199
+
+    99-> 5th 
+    45-> 2nd 
+    12-> 1st
+    5000-> 6th
+
+    3 
+
+
+    min 
+    avg 
+    max 
+
+
+
+
+Time 
+Space 
+
+    Big O of your algo ? => worst case => max 
+
+
+                                DS 
+    Linear                                          Non Linear 
+
+    Array                                           Tree  
+    Stack                                           Graph 
+    Queue 
+    LinkedList 
+
+    sorting -> bubble , selection , insertion , mergesort ...... 
+
+    search --> linear , binary search 
+
+
+    ------------------------------
+    C , python , java
+    ------------------------------
+
+     C program -> 
+     VS 
+     GCC 
+
+     -----------------------------
+
+    Eng ->  Computer -> Binary 
+    HL   --->  Translator --> LL 
+    Guj --->Translator--> Hindi 
+
+
+    Interpreter : line by line 
+    Compiler  : whole at once 
+    -------------------------------------
+    TC -> BC -> GCC
+    freeware -> 
+    openSource -> 
+    -------------------------------------
+    mingw -> Linux -> GCC -> .c => windows 
+    ------------------------------------
+    emulator -> 
+    ------------------------------------
+    https://code.visualstudio.com/docs/cpp/config-mingw
+-------------------------------------------------------------------
+Array ->  collection of same type of data type 
+single variable => n numbers -> static -> n = 10
+    int a[5];  a[0] a[1] a[2] a[3] a[4]
+    item -> index -> start : 0 and end with size-1 
+    continue 
+
+
+    scan
+    print 
+     
+
+------------------------------
+						
+						
+			CPU			
+			Register		KB	
+	memory?		Cache		MB	
+		main memory	RAM	4 8 16 	GB	
+		seconday Storage	HDD/SSD		TB	
+						
+						
+			data speed 		transfer	
+	8 gb					
+	16 gb					
+-----------------------------------------
+
+
+Storage class -> 
+    1)auto    : local  : g.v 
+    2)extern   : global : 0 
+    3)static   :
+    4)register : 
+
+
+int a[5];//global 
+int a; //global 
+void main(){
+    int a; // g.v     
+    print a-> a[0]..a[4] // 0 0 0 0 0  
+    //local 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
