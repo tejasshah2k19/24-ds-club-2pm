@@ -15,9 +15,10 @@ void bubbleSort(){
 
 	int i,j; 
 	int tmp;
+	int count=0;
 	for(j=1;j<SIZE;j++){
 	    for(i=0; i <= SIZE - 2 ; i++ ){
-	
+		count++;
 		  if( a[i] > a[i+1] ){
 		 	tmp = a[i];
 			a[i] = a[i+1];
@@ -26,6 +27,7 @@ void bubbleSort(){
 	    } // i 
       }//j  
 
+      printf("\n%d times executed",count);	 
 }//bubbleSort 
 
 int main(){
