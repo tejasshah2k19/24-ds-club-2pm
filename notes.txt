@@ -199,6 +199,49 @@ Display( ) -> 50 40 30 20 10
 
 
 
+STACK -> data Storage -> behaviour 
+
+
+
+LiFo -> Last In First Out -> STACK 
+
+30
+20
+10
+
+
+LiFo -> 
+
+
+#define SIZE 5 
+int a[SIZE];
+
+
+
+10 20 
+
+
+------------
+							
+							
+							
+	SIZE : 5 						
+							
+							
+	4	50	top			PUSH(10)	top++
+	3	40				PUSH(20)	top++
+	2	30				display( )	20 10
+	1	20				PUSH(30)	top++
+	0	10				PUSH(40)	top++
+		a				PUSH(50)	top++
+	-1					display()	
+						PUSH(100)	
+							
+							
+							
+							
+
+
 
 
 
