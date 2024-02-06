@@ -238,10 +238,27 @@ int a[SIZE];
 						PUSH(100)	
 							
 							
-							
+---------------------------------------------------------------------------------------------
+Queue -> 
+        FiFo  - first in first out 
+
+        -> movie ticket -> 
+        -> flipkart -> order -> 
+
 							
 
 
+								
+	stack	LiFo	PUSH	POP	    top			
+	queue	FiFo	insert	delete	front,rear			
+					                start,end			
+								
+			1)	simple queue				
+			2)	circular queue				
+			3)	priority queue				
+
+
+------------------------------------------------
 
 
 
