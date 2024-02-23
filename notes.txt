@@ -396,18 +396,71 @@ jony jony yes papa
  
 
 
---------------------------------------------------------------------------------------------------------
 
 
 
 
 
+-------------------------------------------------------------------------------
 
 
 
 
+class -> logical , group , general 
+
+object -> physical , member , special 
 
 
+
+Iphone : class 
+Laptop : class 
+
+Gandhiji : object 
+
+Dhiraj Sir : object  
+
+Remote : class 
+
+LEd Tv : class 
+
+Legion Y 520 Laptop : object 
+
+
+class : property ->   function , variable 
+
+object -> can access class property 
+
+
+class Bank : 
+    accountNum 
+    userName
+    password
+    balance 
+
+    wid()
+    dep()
+    checkBal()
+    transfer() 
+
+
+x {accountNum,userName,password,balance,functions } 19
+Y {accountNum,userName,password,balance,functions } 25
+z {accountNum,userName,password,balance,functions } 36
+A {accountNum,userName,password,balance,functions } 58 
+
+x.wid(1000)   
+
+
+
+Queue 
+    insert()
+    delete() 
+
+
+ playerA insert {2,3,4,5,}
+ playerB insert {,4,,5,6,6}
+ balle  {1,3}
+--------------------------------------------------------------------------------------------
 
 
  
