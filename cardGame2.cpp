@@ -64,15 +64,30 @@ void printCards()
 void playBattle(int x,int y){
     if(x > y ){
         //playerA
+        if(battle.size() != 0){
+            for(auto i:battle){
+                playerA.push_back(i);
+            }
+            battle.clear();
+        }
         playerA.push_back(x);
         playerA.push_back(y); 
     }else if(x < y){
         //player B
         
+        if(battle.size() != 0){
+            for(auto i:battle){
+                playerB.push_back(i);
+            }
+            battle.clear();
+        }
         playerB.push_back(x);
         playerB.push_back(y); 
     }else if(x == y){
         //tie 
+        printf("\n==TIE===");
+        battle.push_back(x);
+        battle.push_back(y); 
 
     }
 } 
@@ -80,19 +95,31 @@ void playBattle(int x,int y){
 
 int main(){
     int x,y; 
+    int i; 
     generateCards();
     distributeCards();
     printCards();
 
-    x = playerA.at(0);
-    y = playerB.at(0);
 
-    // playerA.clear(0); 
-    playerA.erase(playerA.begin());
-    playerB.erase(playerB.begin()); 
+    for(i=1;i<=100;i++){ 
+        
+        if(playerA.size()==0){
+            printf("\nPlayer  B IS WINNER");
+            break; 
+        }
+        if(playerB.size() == 0){
+            printf("\nPlayer A IS WINNER");
+            break;
+        }
+        x = playerA.at(0);
+        y = playerB.at(0);
 
-    playBattle(x,y); 
+        // playerA.clear(0); 
+        playerA.erase(playerA.begin());
+        playerB.erase(playerB.begin()); 
 
+        playBattle(x,y); 
+    }
     printf("\n==============\n");
     printCards();
 
