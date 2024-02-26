@@ -464,6 +464,49 @@ Queue
 
 
  
+what is pointer variable? 
+why we use pointer variable? 
+
+pointer variable is a special variable
+which can store an address of another variable. 
+
+
+int k;  // can store value 
+int *p; // can store memory address 
+
+
+int *p;
+int * p ;
+int* p;
+
+___&_____ operator we use to get address of a variable? 
+
+
+------------------------------------------------------------------------------
+DMA -> dynamic memory allocation 
+
+
+int k; //2 byte allocate ->  implicitly allcoated 
+char c; //1 byte -> automatically allocated 
+
+when we are done with out program , memory will be release 
+
+-----------------------------------------------------------------------------
+
+when user/developer allocates memory - DMA 
+
+c -> 
+    malloc() - alloctes block only 
+    calloc() - allocte n number of blocks with same size 
+    free()
+    realloc() - if you want to resize existing allocated memory -we will use 
+
+int *p; // 2 byte 
+
+//array 
+int *a; //array  => 2byte * 5 
+
+
 
 
 
