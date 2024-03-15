@@ -506,6 +506,140 @@ int *p; // 2 byte
 //array 
 int *a; //array  => 2byte * 5 
 
+--------------------------------------------------------------------------------
+
+
+stdlib.h 
+
+_________ and ________ functions are used to allocate memory in c ? 
+malloc          calloc 
+
+________ function is used to release memory in c? 
+free 
+
+
+_______ is used to store address of a variable? 
+pointer 
+
+
+________ is used to retrive address of  a variable? 
+& 
+
+
+______ is used to know how much byte occupied by variable? 
+sizeof 
+
+_________ is used to allocate 5 block of 2mb in c ? 
+calloc 
+
+
+can we use calloc to allocate memory for sturcture ? 
+YES -- calloc allocate blocks we can allocate single block 
+---------------------------------------------------------------
+
+
+
+int *p; 
+char *c;
+float *j; 
+
+
+
+char *str = "royal education"; 
+
+str++; 
+
+printf("%s",str); //royal education 
+
+printf("%c",str); //r 
+str++;
+printf("%c",str); //o
+
+
+--------------------------------------------------------
+
+list -> self referential 
+
+linked list -> 
+
+india->[] 
+
+usa->[]
+
+uk->[]
+
+germany->[] 
+
+
+
+data -> node -> collection of nodes 
+
+node is divided into two part 
+    1) data 
+    2) next 
+
+
+1st node is mostly known as HEAD{first}
+
+node-> next is null -> last 
+
+
+linked 
+    3 type 
+                1) single linked list - singly 
+                2) double linked list - doubly 
+                3) circular linked list -  singly circular , doubly circular
+
+
+
+1) single linked list 
+        1) insert beg 
+        2) insert end 
+        3) insert any [mid] [num,location]
+
+
+ex.1 
+    10      20      30      40      50      60      70
+    head                                           last 
+
+
+    insert any ->
+            enter location , 3,300 
+
+
+    10      20      300     30      40      50      60      70
+    head                                           last 
+
+
+ex. 2 
+
+    10      20      30      40      50      60      70
+    head                                           last 
+
+    insert any ->
+            enter number , 30 ,300 
+
+    10      20      30      300     40      50      60      70
+    head                                                   last 
+
+    insert any ->
+            enter number , 3000 ,3500
+            3000 not found PTA 
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
