@@ -627,6 +627,30 @@ ex. 2
             3000 not found PTA 
             
 
+---------------------------------------------------------------
+
+tree travesal 
+    1) inOrder          left-root-rigt 
+    2) preOrder         root-left-right 
+    3) postOrder        left-right-root
+
+
+
+---------------------------------------------------------------
+
+recursion -> 
+
+    function calling itslef 
+
+    recursive call must has base case - base condition 
+
+    
+
+
+
+
+
+
 
 
 

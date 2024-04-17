@@ -36,3 +36,7 @@ int main()
     cout<< root->data <<" "<< root->right->data <<"  "<< root->left->data;
     return 0;
 }
+
+
+//50 60 70 
+
