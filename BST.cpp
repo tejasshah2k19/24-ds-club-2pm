@@ -120,7 +120,18 @@ int fact(int num)
 } // fact(5) -> f(5) 5*f(4)
   // 4 *f(3) 3*f(2) 2*f(1) 1
 
-void deleteNode(int key, Node *root)
+Node *inOrderSuccessor(Node *root){
+
+        if(root->right == NULL){
+            return root; 
+        }else{
+            return inOrderSuccessor(root->right);
+        }
+        return NULL;
+}
+
+
+Node *deleteNode(int key, Node *root)
 {
     if (root == NULL)
     {
@@ -128,29 +139,56 @@ void deleteNode(int key, Node *root)
     }
     else if (root->data == key)
     { // 500  == 500
-        cout<<"\nFound";
-        //delete 
+        cout << "\nFound";
+        // delete
 
-        // 0 child 
-        if(root->left == NULL && root->right == NULL){
-            cout<<" 0 Child";
-        }else if(root->left != NULL && root->right != NULL){
-            cout<<" 2 Child";
-        }else{
-            cout<<" 1 Child" ;  
+        // 0 child
+        if (root->left == NULL && root->right == NULL)
+        {
+            cout << " 0 Child";
+            free(root);
+            return NULL;
         }
-        // 1 child 
+        else if (root->left != NULL && root->right != NULL)
+        {
+            cout << " 2 Child";
+            Node *max  = inOrderSuccessor(root->left);
+            cout<<"\n max = "<<max->data; //180
+            root->data  = max->data; 
 
-        // 2 child 
+            return deleteNode(max->data,root->left);
+        }
+        else
+        {
+
+           if(root->left == NULL){
+                Node *p = root->right; 
+                free(root);
+                return p; 
+           }else{
+                Node *p = root->left; 
+                free(root);
+                return p; 
+          
+
+           }     
+            cout << " 1 Child";
+        }
+        // 1 child
+
+        // 2 child
     }
     else if (root->data < key)
     {
-        deleteNode(key, root->right); // 500 , 500
+        // right
+        root->right = deleteNode(key, root->right); // 500 , 500
     }
     else if (root->data > key)
     {
-        deleteNode(key, root->left);
+        root->left = deleteNode(key, root->left);
     }
+
+    return root;
 }
 int main()
 {
@@ -179,7 +217,12 @@ int main()
     // print(5) -> 5 4 3 2 1
     // print(5) -> 1 2 3 4 5
 
+    cout<<"\n=>";
+    inOrder(first);
     deleteNode(200, first);
+    
+    cout<<"\n=>";
+    inOrder(first);
 
     return 0;
 }
