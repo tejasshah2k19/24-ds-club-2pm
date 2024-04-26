@@ -96,6 +96,61 @@ int search(int key, Node *root)
     return 0;
 }
 
+Node* deleteInBST(int key, Node *root)
+{ // 500
+
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    else if (root->data == key)
+    { // 500  == 500
+
+        if(root->left == NULL && root->right == NULL){
+            cout<<"\n0 child";
+            delete root; 
+            return NULL;
+        }else if(root->left!=NULL && root->right!=NULL){
+            cout<<"\n2 child";
+                    //left->biggest -> inOrderSuccessor ,
+                    //right->smallest -> inOrderPredecessor 
+            Node *tmp = inOrderSuccessor(root->left);
+            root->data = tmp->data; 
+            return deleteInBST(180,root->left);
+
+        }else{
+            cout<<"\n1 child";
+            if(root->left == NULL){
+                cout<<"\nRight child";
+                root->data = root->right->data;
+                delete root->right;
+                root->right = NULL;
+                return root;//500
+            }else{
+                cout<<"\nLeft Child";
+                root->data = root->left->data;
+                delete root->left;
+                root->left = NULL;
+                return root;//500
+            }
+        }
+        return root;
+    }
+    else if (root->data < key)
+    {
+        return deleteInBST(key, root->right); // 500 , 500
+    }
+    else if (root->data > key)
+    {
+        return deleteInBST(key, root->left);
+    }
+    return 0;
+}
+
+
+
+
+
 int minCount(Node *root, int key, int count) // null,150,0
 {
 
@@ -218,11 +273,14 @@ int main()
     // print(5) -> 1 2 3 4 5
 
     cout<<"\n=>";
-    inOrder(first);
-    deleteNode(200, first);
+    
+    deleteInBST(200,first);
+    
+    //inOrder(first);
+ //   deleteNode(200, first);
     
     cout<<"\n=>";
-    inOrder(first);
+   // inOrder(first);
 
     return 0;
 }
