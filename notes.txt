@@ -644,6 +644,20 @@ recursion ->
 
     recursive call must has base case - base condition 
 
+  -------------------------------------------------------------------
+
+
+AVL 
+
+    LL -> right rotate 
+    RR -> left rotate 
+    RL -> right rotate - left rotate 
+    LR -> left rotate - right rotate 
+
+
+-------------------------------------------------------------
+
+  
     
 
 
