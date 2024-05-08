@@ -33,6 +33,20 @@ int calculateHeight(Node *root)
     }
     // return 2 ;
 }
+int calculateBF(Node *root){
+    int lh =0 ;
+    int rh = 0; 
+
+    if(root->left != NULL){
+        lh = root->left->height;
+    }
+    if(root->right != NULL){
+        lh = root->right->height;
+    }
+
+    return lh - rh; 
+
+}
 Node *addNode(Node *root, int num)
 {
     if (root == NULL)
@@ -50,11 +64,16 @@ Node *addNode(Node *root, int num)
         // right insert
         int height = calculateHeight(root);
         root->height = height; 
+
+        //bf = calculateBF(root);
     }
     else
     {
         root->left = addNode(root->left, num);
         // left insert
+        int height = calculateHeight(root);
+        root->height = height; 
+   
     }
 
     return root;
@@ -75,16 +94,11 @@ int main()
     Node *root = NULL;
 
     root = addNode(root, 200);
-
-    addNode(root, 500);
-    addNode(root, 600);
-    addNode(root, 300);
-
-    addNode(root, 100);
-    addNode(root, 150);
-    addNode(root, 50);
+    addNode(root,100);
+    addNode(root,300);//1 
+ 
 
     inOrder(root);
-
+    
     return 0;
 }
