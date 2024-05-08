@@ -69,10 +69,19 @@ Node *addNode(int num, Node *root) // 200,200
             root->right = addNode(num, root->right); // 300,NULL
             //height 
             root->height = calculateHeight(root);
-            int balanceFactor  = calculateBF(root);
-            cout<<"\nRIGHT -> BF of "<<root->data<<" = "<<balanceFactor;
+            int balanceFactor  = calculateBF(root);//300 
+            //cout<<"\nRIGHT -> BF of "<<root->data<<" = "<<balanceFactor;
 
+            if(balanceFactor < -1){
+                cout<<"\nIM : "<<root->data<<"::"<<balanceFactor;
+                cout<<"\nRIGHT::"; 
+                if( num> root->right->data ){
+                    cout<<"RIGHT";
+                }else{
+                    cout<<"LEFT";
+                }
 
+            } 
         }
         else
         {
@@ -80,7 +89,19 @@ Node *addNode(int num, Node *root) // 200,200
             root->left = addNode(num, root->left); // 100,NULL
             root->height = calculateHeight(root);
             int balanceFactor  = calculateBF(root);
-            cout<<"\nLEFT -> BF of "<<root->data<<" = "<<balanceFactor;
+           // cout<<"\nLEFT -> BF of "<<root->data<<" = "<<balanceFactor;
+            
+            if(balanceFactor > 1  ){
+               
+                cout<<"\n IM : "<<root->data<<"::"<<balanceFactor; 
+                cout<<"\nLEFT::";
+                if(num > root->left->data){
+                      cout<<"RIGHT";  
+                }else{
+                    cout<<"LEFT";
+                }
+
+            } 
 
         }
 
@@ -128,15 +149,15 @@ void postOrder(Node *root)
     Node *first = NULL;
     int count = 0;
     //LL 
-    // cout<<endl<<"inserting 300";
-    // first = addNode(300, first);
-    // cout<<endl<<"inserting 200";
-    // addNode(200, first); // 300,200
-    // cout<<endl<<"inserting 100";
-    // addNode(100, first); 
-    // cout<<"\n*********\n";
+    cout<<endl<<"inserting 300";
+    first = addNode(300, first);
+    cout<<endl<<"inserting 200";
+    addNode(200, first); // 300,200
+    cout<<endl<<"inserting 100";
+    addNode(100, first); 
+    cout<<"\n*********\n";
 
-    //RR 
+    // RR 
     // cout<<endl<<"inserting 300";
     // first = addNode(300, first);
     // cout<<endl<<"inserting 400";
@@ -158,13 +179,13 @@ void postOrder(Node *root)
 
 
     //RL
-    cout<<endl<<"inserting 300";
-    first = addNode(300, first);
-    cout<<endl<<"inserting 500";
-    addNode(500, first); // 300,200
-    cout<<endl<<"inserting 400";
-    addNode(400, first); 
-    cout<<"\n*********\n";
+    // cout<<endl<<"inserting 300";
+    // first = addNode(300, first);
+    // cout<<endl<<"inserting 500";
+    // addNode(500, first); // 300,200
+    // cout<<endl<<"inserting 400";
+    // addNode(400, first); 
+    // cout<<"\n*********\n";
 
     inOrder(first);
     return 0;
