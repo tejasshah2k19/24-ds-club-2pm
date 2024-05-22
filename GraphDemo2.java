@@ -23,17 +23,29 @@ public class GraphDemo2 {
             System.out.println("Enter src and Dest");
             src = scr.nextInt();// 2
             dest = scr.nextInt();// 1
-            graph[src][dest] = 1;
-            graph[dest][src] = 1;
+            System.out.println("Enter Cost");
+            int cost = scr.nextInt();   
+            graph[src][dest] = cost;
+            graph[dest][src] = cost;
         }
  
         for (int i = 0; i < totalVertex; i++) {
             System.out.println(i + " is connected with : ");
             for (int c = 0; c < totalVertex; c++) {
-                if (graph[i][c] == 1) {
+                if (graph[i][c] != 0) {
                     System.out.println(" : " + c);
                 }
             }
         }
+    
+        int find = 0; 
+        int sum =0;
+        for (int c = 0; c < totalVertex; c++) {
+            if (graph[find][c] != 0) {
+                sum = sum + graph[find][c]; 
+            }
+        }
+        System.out.println("Total "+sum);
+    
     }
 }
