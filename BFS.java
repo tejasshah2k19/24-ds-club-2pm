@@ -73,20 +73,26 @@ class Graph{
         System.out.println("Enter Starting Vertex:node");
         int visitedIndex = 0 ;
         int nextIndex = 0;
-        int cur = scr.nextInt();//25
+        int cur = scr.nextInt();//1
     
         visited[visitedIndex] = cur ; 
+        visitedIndex++; 
 
         while(visitedIndex < totalVertex){ 
+            cur = visited[nextIndex];//1 
             for(int i=0;i<totalEdges;i++){
                 if(edges[i].src == cur && isVisited(edges[i].dest) == false){
-                    visitedIndex++;
-                    visited[visitedIndex] =  edges[i].dest;//25 35 1 2 
-                        
+                  
+                    visited[visitedIndex] =  edges[i].dest;//1 0 2  
+                    visitedIndex++;//1 2 
+                    System.out.println(edges[i].dest);   //2   
                 }
             }
-            nextIndex++;//2
-            cur = visited[nextIndex];
+            System.out.println("==>VisitedIndex==> "+visitedIndex);
+            nextIndex++;
+            System.out.println("==>NextIndex==> "+nextIndex);
+             
+            
         }
     }
     
